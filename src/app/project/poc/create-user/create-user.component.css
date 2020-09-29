@@ -1,0 +1,10 @@
+.mat-card {
+    font-family: "LatoWebRegular", Tahoma, Geneva, sans-serif;
+    margin: 10px;
+    padding: 10px !important;
+    box-shadow: none !important;
+    text-align: left !important;
+  }
+  .mat-card-header{
+    padding-bottom: 5px;
+  }

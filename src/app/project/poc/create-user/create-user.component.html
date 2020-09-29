@@ -1,0 +1,59 @@
+<div class="fixed-header">
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Register Employee</mat-card-title>
+  </mat-card-header> 
+  <mat-card-content>
+      <form [formGroup]="profileForm" fxLayout fxLayout.xs="column" fxLayoutGap="10px" fxLayoutAlign="space-evenly start" >
+        <div fxLayout="column" fxFlex="100%" fxLayoutGap="0px" fxLayoutAlign="start">
+            <mat-form-field appearance="outline">
+                <mat-label>Fist Name</mat-label>
+                <input type="text" matInput  formControlName="empFistName" >
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input type="text" matInput  formControlName="empLastName" >
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Employee NIC</mat-label>
+                <input type="text" matInput formControlName="empNic" >
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Employee Address</mat-label>
+                <input type="text" matInput formControlName="empAddress" >
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Gender</mat-label>
+                <mat-select formControlName="empGender" disableOptionCentering  [(ngModel)]="empGender" > 
+                  <mat-option [value]="null"></mat-option> 
+                   <mat-option *ngFor="let type of employeeGenderList" [value]="type"  >{{type}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Department</mat-label>
+                <mat-select formControlName="empDepartment" disableOptionCentering  [(ngModel)]="empDepartment" > 
+                  <mat-option [value]="null"></mat-option> 
+                   <mat-option *ngFor="let type of empDepartmentList" [value]="type"  >{{type}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Employee Type</mat-label>
+                <mat-select formControlName="empType" disableOptionCentering  [(ngModel)]="empType" > 
+                  <mat-option [value]="null"></mat-option> 
+                   <mat-option *ngFor="let type of empTypeList" [value]="type"  >{{type}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <div fxLayout="row" fxLayoutAlign="space-between center" >
+              <button mat-stroked-button color="primary"  (click)="userSignUp()"  >Sign Up</button>
+              <button mat-stroked-button color="primary">Cancel</button>   
+              </div>
+        </div>   
+        
+      </form>        
+    </mat-card-content>
+
+  </mat-card>
+  
+  <div class="fixed-footer">
+  </div>  
